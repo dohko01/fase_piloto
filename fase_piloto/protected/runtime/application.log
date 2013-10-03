@@ -1,0 +1,979 @@
+2013/10/03 04:34:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in C:\wamp\www\yii\framework\gii\GiiModule.php:170
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/piloto/index.php?r=gii
+---
+2013/10/03 04:41:17 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42501]: Insufficient privilege: 7 ERROR:  permiso denegado a la relación tblc_tipoUsuario. The SQL statement executed was: SELECT COUNT(*) FROM "tblc_tipoUsuario" "t".
+in C:\wamp\www\piloto\protected\views\tipoUsuario\index.php (20)
+in C:\wamp\www\piloto\protected\controllers\TipoUsuarioController.php (128)
+in C:\wamp\www\piloto\index.php (13)
+2013/10/03 04:41:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42501]: Insufficient privilege: 7 ERROR:  permiso denegado a la relación tblc_tipoUsuario. The SQL statement executed was: SELECT COUNT(*) FROM "tblc_tipoUsuario" "t"' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\piloto\protected\views\tipoUsuario\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\pil...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\pil...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\pil...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\piloto\protected\controllers\TipoUsuarioController.php(128): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): TipoUsuarioController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tipoUsuario')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/piloto/index.php?r=tipoUsuario
+---
+2013/10/03 04:41:25 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42501]: Insufficient privilege: 7 ERROR:  permiso denegado a la relación tblc_tipoUsuario. The SQL statement executed was: SELECT COUNT(*) FROM "tblc_tipoUsuario" "t".
+in C:\wamp\www\piloto\protected\views\tipoUsuario\index.php (20)
+in C:\wamp\www\piloto\protected\controllers\TipoUsuarioController.php (128)
+in C:\wamp\www\piloto\index.php (13)
+2013/10/03 04:41:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42501]: Insufficient privilege: 7 ERROR:  permiso denegado a la relación tblc_tipoUsuario. The SQL statement executed was: SELECT COUNT(*) FROM "tblc_tipoUsuario" "t"' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\wamp\www\yii\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 C:\wamp\www\yii\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#7 C:\wamp\www\yii\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\wamp\www\piloto\protected\views\tipoUsuario\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\pil...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\pil...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\pil...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\wamp\www\piloto\protected\controllers\TipoUsuarioController.php(128): CController->render('index', Array)
+#16 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): TipoUsuarioController->actionIndex()
+#17 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#26 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('TipoUsuario')
+#27 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/piloto/index.php?r=TipoUsuario
+---
+2013/10/03 14:38:48 [error] [exception.CDbException] exception 'CDbException' with message 'Table "tbl_usuario" does not have a column named "E_USERNAME".' in C:\wamp\www\yii\framework\db\schema\CDbCommandBuilder.php:694
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1518): CDbCommandBuilder->createColumnCriteria(Object(CPgsqlTableSchema), Array, '', Array, '"t".')
+#1 C:\wamp\www\piloto\protected\components\UserIdentity.php(14): CActiveRecord->findByAttributes(Array)
+#2 C:\wamp\www\piloto\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#3 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 C:\wamp\www\piloto\protected\controllers\SiteController.php(94): CModel->validate()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/piloto/index.php?r=site/login
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=site/login
+---
+2013/10/03 14:39:49 [error] [exception.CDbException] exception 'CDbException' with message 'Table "tbl_usuario" does not have a column named "U_USERNAME".' in C:\wamp\www\yii\framework\db\schema\CDbCommandBuilder.php:694
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1518): CDbCommandBuilder->createColumnCriteria(Object(CPgsqlTableSchema), Array, '', Array, '"t".')
+#1 C:\wamp\www\piloto\protected\components\UserIdentity.php(14): CActiveRecord->findByAttributes(Array)
+#2 C:\wamp\www\piloto\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#3 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 C:\wamp\www\piloto\protected\controllers\SiteController.php(94): CModel->validate()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/piloto/index.php?r=site/login
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=site/login
+---
+2013/10/03 14:42:49 [error] [exception.CException] exception 'CException' with message 'Property "Usuario.E_PW" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('E_PW')
+#1 C:\wamp\www\piloto\protected\components\UserIdentity.php(20): CActiveRecord->__get('E_PW')
+#2 C:\wamp\www\piloto\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#3 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 C:\wamp\www\piloto\protected\controllers\SiteController.php(94): CModel->validate()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/piloto/index.php?r=site/login
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=site/login
+---
+2013/10/03 15:15:11 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/piloto/index.php?r=usuario/admin
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=site/login
+---
+2013/10/03 15:34:00 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42703]: Undefined column: 7 ERROR:  no existe la columna «idtipousuario»
+LINE 1: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario
+                                                      ^. The SQL statement executed was: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario.
+in C:\wamp\www\piloto\protected\views\usuario\_form.php (67)
+in C:\wamp\www\piloto\protected\views\usuario\create.php (18)
+in C:\wamp\www\piloto\protected\controllers\UsuarioController.php (79)
+2013/10/03 15:34:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42703]: Undefined column: 7 ERROR:  no existe la columna «idtipousuario»
+LINE 1: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario
+                                                      ^. The SQL statement executed was: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\piloto\protected\views\usuario\_form.php(67): CActiveRecord->findAll(Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\pil...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\pil...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\pil...', Array, true)
+#7 C:\wamp\www\piloto\protected\views\usuario\create.php(18): CController->renderPartial('_form', Array)
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\pil...')
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\pil...', Array, true)
+#10 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\pil...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\wamp\www\piloto\protected\controllers\UsuarioController.php(79): CController->render('create', Array)
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UsuarioController->actionCreate()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/piloto/index.php?r=usuario/create
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=usuario/view&id=1
+---
+2013/10/03 15:34:50 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42703]: Undefined column: 7 ERROR:  no existe la columna «idtipousuario»
+LINE 1: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario
+                                                      ^. The SQL statement executed was: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario.
+in C:\wamp\www\piloto\protected\views\usuario\_form.php (67)
+in C:\wamp\www\piloto\protected\views\usuario\create.php (18)
+in C:\wamp\www\piloto\protected\controllers\UsuarioController.php (79)
+2013/10/03 15:34:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42703]: Undefined column: 7 ERROR:  no existe la columna «idtipousuario»
+LINE 1: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario
+                                                      ^. The SQL statement executed was: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\piloto\protected\views\usuario\_form.php(67): CActiveRecord->findAll(Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\pil...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\pil...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\pil...', Array, true)
+#7 C:\wamp\www\piloto\protected\views\usuario\create.php(18): CController->renderPartial('_form', Array)
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\pil...')
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\pil...', Array, true)
+#10 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\pil...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\wamp\www\piloto\protected\controllers\UsuarioController.php(79): CController->render('create', Array)
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UsuarioController->actionCreate()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/piloto/index.php?r=usuario/create
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=usuario/view&id=1
+---
+2013/10/03 15:34:52 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42703]: Undefined column: 7 ERROR:  no existe la columna «idtipousuario»
+LINE 1: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario
+                                                      ^. The SQL statement executed was: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario.
+in C:\wamp\www\piloto\protected\views\usuario\_form.php (67)
+in C:\wamp\www\piloto\protected\views\usuario\create.php (18)
+in C:\wamp\www\piloto\protected\controllers\UsuarioController.php (79)
+2013/10/03 15:34:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42703]: Undefined column: 7 ERROR:  no existe la columna «idtipousuario»
+LINE 1: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario
+                                                      ^. The SQL statement executed was: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\piloto\protected\views\usuario\_form.php(67): CActiveRecord->findAll(Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\pil...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\pil...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\pil...', Array, true)
+#7 C:\wamp\www\piloto\protected\views\usuario\create.php(18): CController->renderPartial('_form', Array)
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\pil...')
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\pil...', Array, true)
+#10 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\pil...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\wamp\www\piloto\protected\controllers\UsuarioController.php(79): CController->render('create', Array)
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UsuarioController->actionCreate()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/piloto/index.php?r=usuario/create
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=usuario/view&id=1
+---
+2013/10/03 15:36:11 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42703]: Undefined column: 7 ERROR:  no existe la columna «idtipousuario»
+LINE 1: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario
+                                                      ^. The SQL statement executed was: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario.
+in C:\wamp\www\piloto\protected\views\usuario\_form.php (67)
+in C:\wamp\www\piloto\protected\views\usuario\create.php (18)
+in C:\wamp\www\piloto\protected\controllers\UsuarioController.php (79)
+2013/10/03 15:36:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42703]: Undefined column: 7 ERROR:  no existe la columna «idtipousuario»
+LINE 1: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario
+                                                      ^. The SQL statement executed was: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\piloto\protected\views\usuario\_form.php(67): CActiveRecord->findAll(Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\pil...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\pil...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\pil...', Array, true)
+#7 C:\wamp\www\piloto\protected\views\usuario\create.php(18): CController->renderPartial('_form', Array)
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\pil...')
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\pil...', Array, true)
+#10 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\pil...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\wamp\www\piloto\protected\controllers\UsuarioController.php(79): CController->render('create', Array)
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UsuarioController->actionCreate()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/piloto/index.php?r=usuario/create
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=usuario/view&id=1
+---
+2013/10/03 15:36:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42703]: Undefined column: 7 ERROR:  no existe la columna «idtipousuario»
+LINE 1: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario
+                                                      ^. The SQL statement executed was: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario.
+in C:\wamp\www\piloto\protected\views\usuario\_form.php (67)
+in C:\wamp\www\piloto\protected\views\usuario\create.php (18)
+in C:\wamp\www\piloto\protected\controllers\UsuarioController.php (79)
+2013/10/03 15:36:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42703]: Undefined column: 7 ERROR:  no existe la columna «idtipousuario»
+LINE 1: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario
+                                                      ^. The SQL statement executed was: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\piloto\protected\views\usuario\_form.php(67): CActiveRecord->findAll(Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\pil...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\pil...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\pil...', Array, true)
+#7 C:\wamp\www\piloto\protected\views\usuario\create.php(18): CController->renderPartial('_form', Array)
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\pil...')
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\pil...', Array, true)
+#10 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\pil...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\wamp\www\piloto\protected\controllers\UsuarioController.php(79): CController->render('create', Array)
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UsuarioController->actionCreate()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/piloto/index.php?r=usuario/create
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=usuario/view&id=1
+---
+2013/10/03 15:36:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42703]: Undefined column: 7 ERROR:  no existe la columna «idtipousuario»
+LINE 1: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario
+                                                      ^. The SQL statement executed was: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario.
+in C:\wamp\www\piloto\protected\views\usuario\_form.php (67)
+in C:\wamp\www\piloto\protected\views\usuario\create.php (18)
+in C:\wamp\www\piloto\protected\controllers\UsuarioController.php (79)
+2013/10/03 15:36:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42703]: Undefined column: 7 ERROR:  no existe la columna «idtipousuario»
+LINE 1: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario
+                                                      ^. The SQL statement executed was: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\piloto\protected\views\usuario\_form.php(67): CActiveRecord->findAll(Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\pil...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\pil...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\pil...', Array, true)
+#7 C:\wamp\www\piloto\protected\views\usuario\create.php(18): CController->renderPartial('_form', Array)
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\pil...')
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\pil...', Array, true)
+#10 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\pil...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\wamp\www\piloto\protected\controllers\UsuarioController.php(79): CController->render('create', Array)
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UsuarioController->actionCreate()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/piloto/index.php?r=usuario/create
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=usuario/view&id=1
+---
+2013/10/03 15:36:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42703]: Undefined column: 7 ERROR:  no existe la columna «idtipousuario»
+LINE 1: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario
+                                                      ^. The SQL statement executed was: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario.
+in C:\wamp\www\piloto\protected\views\usuario\_form.php (67)
+in C:\wamp\www\piloto\protected\views\usuario\create.php (18)
+in C:\wamp\www\piloto\protected\controllers\UsuarioController.php (79)
+2013/10/03 15:36:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42703]: Undefined column: 7 ERROR:  no existe la columna «idtipousuario»
+LINE 1: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario
+                                                      ^. The SQL statement executed was: SELECT * FROM "tblc_tipoUsuario" "t" ORDER BY idTipoUsuario' in C:\wamp\www\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\piloto\protected\views\usuario\_form.php(67): CActiveRecord->findAll(Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\pil...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\pil...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\pil...', Array, true)
+#7 C:\wamp\www\piloto\protected\views\usuario\create.php(18): CController->renderPartial('_form', Array)
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\pil...')
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\pil...', Array, true)
+#10 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\pil...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\wamp\www\piloto\protected\controllers\UsuarioController.php(79): CController->render('create', Array)
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UsuarioController->actionCreate()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/piloto/index.php?r=usuario/create
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=usuario/view&id=1
+---
+2013/10/03 15:52:25 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tipoUsuario/adm...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/piloto/index.php?r=tipoUsuario/admin
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=tipoUsuario/view&id=3
+---
+2013/10/03 16:35:19 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tipoUsuario/adm...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/piloto/index.php?r=tipoUsuario/admin
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=tipoUsuario/create
+---
+2013/10/03 16:35:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tipoUsuario/adm...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/piloto/index.php?r=tipoUsuario/admin
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=tipoUsuario/create
+---
+2013/10/03 16:35:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tipoUsuario/adm...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/piloto/index.php?r=tipoUsuario/admin
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=tipoUsuario/create
+---
+2013/10/03 16:36:04 [error] [php] call_user_func_array() expects parameter 1 to be a valid callback, array must have exactly two members (C:\wamp\www\yii\framework\base\CComponent.php:617)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(288): CAccessRule->isExpressionMatched()
+#1 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed()
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): UsuarioController->runActionWithFilters()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): UsuarioController->run()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\piloto\index.php(13): CWebApplication->run()
+REQUEST_URI=/piloto/index.php?r=usuario/create
+in C:\wamp\www\piloto\index.php (13)
+2013/10/03 16:36:56 [error] [php] Undefined variable: usuario (C:\wamp\www\yii\framework\base\CComponent.php(612) : eval()'d code:1)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(288): CAccessRule->isExpressionMatched()
+#1 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed()
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): UsuarioController->runActionWithFilters()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): UsuarioController->run()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\piloto\index.php(13): CWebApplication->run()
+REQUEST_URI=/piloto/index.php?r=usuario/create
+in C:\wamp\www\piloto\index.php (13)
+2013/10/03 16:39:17 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.idTipoUsuario" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idTipoUsuario')
+#1 C:\wamp\www\yii\framework\base\CComponent.php(612) : eval()'d code(1): CWebUser->__get('idTipoUsuario')
+#2 C:\wamp\www\yii\framework\base\CComponent.php(612): eval()
+#3 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(392): CComponent->evaluateExpression('$user->idTipoUs...', Array)
+#4 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(UsuarioController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/piloto/index.php?r=usuario/create
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=usuario
+---
+2013/10/03 16:39:33 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity._tipoUsuario" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\piloto\protected\components\UserIdentity.php(35): CComponent->__set('_tipoUsuario', 1)
+#1 C:\wamp\www\piloto\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\wamp\www\piloto\protected\controllers\SiteController.php(94): CModel->validate()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/piloto/index.php?r=site/login
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=site/login
+---
+2013/10/03 16:40:10 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.tipoUsuario" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\piloto\protected\components\UserIdentity.php(35): CComponent->__set('tipoUsuario', 1)
+#1 C:\wamp\www\piloto\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\wamp\www\piloto\protected\controllers\SiteController.php(94): CModel->validate()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/piloto/index.php?r=site/login
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=site/login
+---
+2013/10/03 16:40:27 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.idTipoUsuario" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\piloto\protected\components\UserIdentity.php(35): CComponent->__set('idTipoUsuario', 1)
+#1 C:\wamp\www\piloto\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\wamp\www\piloto\protected\controllers\SiteController.php(94): CModel->validate()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/piloto/index.php?r=site/login
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=site/login
+---
+2013/10/03 16:41:19 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity._userType" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\piloto\protected\components\UserIdentity.php(35): CComponent->__set('_userType', 1)
+#1 C:\wamp\www\piloto\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\wamp\www\piloto\protected\controllers\SiteController.php(94): CModel->validate()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/piloto/index.php?r=site/login
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=site/login
+---
+2013/10/03 16:42:38 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.idTipoUsuario" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('idTipoUsuario')
+#1 C:\wamp\www\yii\framework\base\CComponent.php(612) : eval()'d code(1): CWebUser->__get('idTipoUsuario')
+#2 C:\wamp\www\yii\framework\base\CComponent.php(612): eval()
+#3 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(392): CComponent->evaluateExpression('$user->idTipoUs...', Array)
+#4 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(UsuarioController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/piloto/index.php?r=usuario/create
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=usuario
+---
+2013/10/03 16:44:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/piloto/index.php?r=usuario/create
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=usuario
+---
+2013/10/03 16:44:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/piloto/index.php?r=usuario/admin
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=usuario
+---
+2013/10/03 16:44:34 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/update')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/piloto/index.php?r=usuario/update&id=1
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=usuario/view&id=1
+---
+2013/10/03 16:44:37 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/piloto/index.php?r=usuario/create
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=usuario/view&id=1
+---
+2013/10/03 16:44:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/delete')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/piloto/index.php?r=usuario/delete&id=1
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=usuario/view&id=1
+---
+2013/10/03 18:59:30 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.fullcalendar.FullcalendarGraphWidget" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:322
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('application.ext...', true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'application.ext...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('application.ext...', Array)
+#3 C:\wamp\www\piloto\themes\shadow_dancer\views\site\pages\about.php(25): CBaseController->widget('application.ext...', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\pil...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\pil...', NULL, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\pil...', NULL, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('pages/about', NULL, true)
+#8 C:\wamp\www\yii\framework\web\actions\CViewAction.php(140): CController->render('pages/about')
+#9 C:\wamp\www\yii\framework\web\actions\CAction.php(76): CViewAction->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('page')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/piloto/index.php?r=site/page&view=about
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=usuario
+---
+2013/10/03 18:59:38 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.fullcalendar.FullcalendarGraphWidget" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:322
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('application.ext...', true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'application.ext...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('application.ext...', Array)
+#3 C:\wamp\www\piloto\themes\shadow_dancer\views\site\pages\about.php(25): CBaseController->widget('application.ext...', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\pil...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\pil...', NULL, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\pil...', NULL, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('pages/about', NULL, true)
+#8 C:\wamp\www\yii\framework\web\actions\CViewAction.php(140): CController->render('pages/about')
+#9 C:\wamp\www\yii\framework\web\actions\CAction.php(76): CViewAction->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('page')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/piloto/index.php?r=site/page&view=about
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=site/contact
+---
+2013/10/03 19:00:45 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.fullcalendar.FullcalendarGraphWidget" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:322
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('application.ext...', true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'application.ext...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('application.ext...', Array)
+#3 C:\wamp\www\piloto\themes\shadow_dancer\views\site\pages\about.php(25): CBaseController->widget('application.ext...', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\pil...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\pil...', NULL, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\pil...', NULL, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('pages/about', NULL, true)
+#8 C:\wamp\www\yii\framework\web\actions\CViewAction.php(140): CController->render('pages/about')
+#9 C:\wamp\www\yii\framework\web\actions\CAction.php(76): CViewAction->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('page')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/piloto/index.php?r=site/page&view=about
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=site/contact
+---
+2013/10/03 19:13:54 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tipoUsuario/adm...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/piloto/index.php?r=tipoUsuario/admin
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=tipoUsuario/create
+---
+2013/10/03 19:14:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tipoUsuario/adm...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/piloto/index.php?r=tipoUsuario/admin
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=tipoUsuario/index
+---
+2013/10/03 19:15:20 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tipoUsuario/adm...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/piloto/index.php?r=tipoUsuario/admin
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=tipoUsuario
+---
+2013/10/03 19:16:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tipoUsuario/adm...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/piloto/index.php?r=tipoUsuario/admin
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=tipoUsuario/update&id=1
+---
+2013/10/03 19:29:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tables".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tables')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/piloto/index.php?r=tables
+---
+2013/10/03 19:29:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "tables".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('tables')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('tables')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/tables')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/piloto/index.php?r=site/tables
+---
+2013/10/03 19:32:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tables".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tables')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/piloto/index.php?r=tables
+---
+2013/10/03 22:34:36 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tipoUsuario/adm...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/piloto/index.php?r=tipoUsuario/admin
+HTTP_REFERER=http://localhost:8080/piloto/index.php?r=tipoUsuario
+---
+2013/10/03 23:19:51 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.tipoUsuario" is not defined.' in C:\wamp\www\piloto\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\piloto\framework\web\auth\CWebUser.php(146): CComponent->__get('tipoUsuario')
+#1 C:\wamp\www\piloto\framework\base\CComponent.php(612) : eval()'d code(1): CWebUser->__get('tipoUsuario')
+#2 C:\wamp\www\piloto\framework\base\CComponent.php(612): eval()
+#3 C:\wamp\www\piloto\framework\web\auth\CAccessControlFilter.php(392): CComponent->evaluateExpression('$user->tipoUsua...', Array)
+#4 C:\wamp\www\piloto\framework\web\auth\CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 C:\wamp\www\piloto\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(TipoUsuarioController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 C:\wamp\www\piloto\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 C:\wamp\www\piloto\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\piloto\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\piloto\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\piloto\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\piloto\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\piloto\framework\web\CWebApplication.php(282): CController->run('admin')
+#13 C:\wamp\www\piloto\framework\web\CWebApplication.php(141): CWebApplication->runController('tipoUsuario/adm...')
+#14 C:\wamp\www\piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\piloto\fase_piloto\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/piloto/fase_piloto/index.php?r=tipoUsuario/admin
+HTTP_REFERER=http://localhost:8080/piloto/fase_piloto/index.php?r=tipoUsuario
+---
+2013/10/03 23:20:12 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.tipoUsuario" is not defined.' in C:\wamp\www\piloto\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\piloto\framework\web\auth\CWebUser.php(146): CComponent->__get('tipoUsuario')
+#1 C:\wamp\www\piloto\framework\base\CComponent.php(612) : eval()'d code(1): CWebUser->__get('tipoUsuario')
+#2 C:\wamp\www\piloto\framework\base\CComponent.php(612): eval()
+#3 C:\wamp\www\piloto\framework\web\auth\CAccessControlFilter.php(392): CComponent->evaluateExpression('$user->tipoUsua...', Array)
+#4 C:\wamp\www\piloto\framework\web\auth\CAccessControlFilter.php(288): CAccessRule->isExpressionMatched(Object(CWebUser))
+#5 C:\wamp\www\piloto\framework\web\auth\CAccessControlFilter.php(138): CAccessRule->isUserAllowed(Object(CWebUser), Object(UsuarioController), Object(CInlineAction), '127.0.0.1', 'GET')
+#6 C:\wamp\www\piloto\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#7 C:\wamp\www\piloto\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\piloto\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\piloto\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\piloto\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\piloto\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\piloto\framework\web\CWebApplication.php(282): CController->run('admin')
+#13 C:\wamp\www\piloto\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/admin')
+#14 C:\wamp\www\piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\piloto\fase_piloto\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/piloto/fase_piloto/index.php?r=usuario/admin
+HTTP_REFERER=http://localhost:8080/piloto/fase_piloto/index.php?r=usuario
+---
