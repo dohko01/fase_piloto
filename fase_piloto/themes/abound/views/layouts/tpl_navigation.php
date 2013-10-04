@@ -12,7 +12,7 @@
           
           <div class="nav-collapse">
 		  <?php 
-		  
+	
 		$items = array();
 		$items[] = array('label'=>'Home', 'url'=>array('/site/index'));
 		if(Yii::app()->user->id != 0 && Yii::app()->user->tipoUsuario == 1)
@@ -22,9 +22,10 @@
 							'items'=>array(
 								array('label'=>'Tipos de Usuario', 'url'=>array('/tipoUsuario')),
 								array('label'=>'Usuarios', 'url'=>array('/usuario')),
-								array('label'=>'My Invoices <span class="badge badge-info pull-right">12</span>', 'url'=>'#'),
-								array('label'=>'Separated link', 'url'=>'#'),
-								array('label'=>'One more separated link', 'url'=>'#'),
+								array('label'=>'Tipo Indicador', 'url'=>array('/tipoIndicador')),
+								array('label'=>'Nivel', 'url'=>array('/nivel')),
+								array('label'=>'Clasificacion', 'url'=>array('/clasificacion')),
+								array('label'=>'Direccion', 'url'=>array('/direccion')),
 							)));
 		}
 		  
