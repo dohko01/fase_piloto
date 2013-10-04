@@ -1,12 +1,12 @@
 <?php
 
 /**
- * This is the model class for table "tblc_tipoUsuario".
+ * This is the model class for table "tblc_tipo_usuario".
  *
- * The followings are the available columns in table 'tblc_tipoUsuario':
- * @property integer $idTipoUsuario
+ * The followings are the available columns in table 'tblc_tipo_usuario':
+ * @property integer $id
  * @property string $nombre
- * @property string $eliminado
+ * @property boolean $activo
  *
  * The followings are the available model relations:
  * @property TblUsuario[] $tblUsuarios
@@ -18,7 +18,7 @@ class TipoUsuario extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'tblc_tipoUsuario';
+		return 'tblc_tipo_usuario';
 	}
 
 	/**
@@ -29,11 +29,12 @@ class TipoUsuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre', 'length', 'max'=>255),
-			array('eliminado', 'length', 'max'=>1),
+			array('nombre', 'required'),
+			array('nombre', 'length', 'max'=>45),
+			array('activo', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idTipoUsuario, nombre, eliminado', 'safe', 'on'=>'search'),
+			array('id, nombre, activo', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -45,7 +46,7 @@ class TipoUsuario extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'tblUsuarios' => array(self::HAS_MANY, 'TblUsuario', 'idTipoUsuario'),
+			'tblUsuarios' => array(self::HAS_MANY, 'TblUsuario', 'id_cat_tipo_usuario'),
 		);
 	}
 
@@ -55,9 +56,9 @@ class TipoUsuario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idTipoUsuario' => 'Id Tipo Usuario',
+			'id' => 'ID',
 			'nombre' => 'Nombre',
-			'eliminado' => 'Eliminado',
+			'activo' => 'Activo',
 		);
 	}
 
@@ -79,9 +80,9 @@ class TipoUsuario extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idTipoUsuario',$this->idTipoUsuario);
+		$criteria->compare('id',$this->id);
 		$criteria->compare('nombre',$this->nombre,true);
-		$criteria->compare('eliminado',$this->eliminado,true);
+		$criteria->compare('activo',$this->activo);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

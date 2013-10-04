@@ -11,29 +11,29 @@ class UserIdentity extends CUserIdentity
 	private $_id;
 	public function authenticate()
 	{
-		$record=Usuario::model()->findByAttributes(array('username'=>$this->username));  // here I use Username as user name which comes from database
-		
+		$record=Usuario::model()->findByAttributes(array('user'=>$this->username));  // here I use Username as user name which comes from database
+		//echo $record->id_cat_tipo_usuario; exit(0);
 		if($record===null)
 		{
 			$this->_id='user Null';
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
 		}
-		else if($record->pw!==$this->password)            // here I compare db password with passwod field
+		else if($record->pass!==$this->password)            // here I compare db password with passwod field
 		{
-			$this->_id=$this->username;
+			//$this->_id=$this->username;
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
 		}
-		else if($record['activo']!==1)                //  here I check status as Active in db
+		else if(!$record->activo)                //  here I check status as Active in db
 		{        
 			$err = "You have been Inactive by Admin.";
 			$this->errorCode = $err;
 		}
-		
 		else
 		{  
-			$this->_id=$record['nombre'];
-			$this->setState('tipoUsuario', $record['idTipoUsuario']);
-			$this->setState('title', $record['nombre']);
+			$this->_id = $record->activo;
+			$this->setState('tipoUsuario', $record->id_cat_tipo_usuario);
+			//$this->setState('activo', $record->activo);
+			$this->setState('title', $record->nombre);
 			$this->errorCode=self::ERROR_NONE;		
 		}
 		return !$this->errorCode;

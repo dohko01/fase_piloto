@@ -42,21 +42,18 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'usuario-grid',
-	'itemsCssClass'=>'table table-striped table-bordered table-hover',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'idUsuario',
+		'id',
+		'id_cat_tipo_usuario',
 		'nombre',
-		'apellido_paterno',
-		'apellido_materno',
-		'username',
-		'pw',
-		/*
-		'activo',
-		'permisos',
-		'idTipoUsuario',
 		'email',
+		'telefono',
+		'user',
+		/*
+		'pass',
+		'activo',
 		*/
 		array(
 			'class'=>'CButtonColumn',

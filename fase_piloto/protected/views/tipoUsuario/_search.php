@@ -12,18 +12,18 @@
 )); ?>
 
 	<div class="row">
-		<?php echo $form->label($model,'idTipoUsuario'); ?>
-		<?php echo $form->textField($model,'idTipoUsuario'); ?>
+		<?php echo $form->label($model,'id'); ?>
+		<?php echo $form->textField($model,'id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'nombre'); ?>
-		<?php echo $form->textField($model,'nombre',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'nombre',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'eliminado'); ?>
-		<?php echo $form->textField($model,'eliminado',array('size'=>1,'maxlength'=>1)); ?>
+		<?php echo $form->label($model,'activo'); ?>
+		<?php echo $form->checkBox($model,'activo'); ?>
 	</div>
 
 	<div class="row buttons">

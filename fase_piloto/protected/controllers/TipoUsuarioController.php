@@ -28,22 +28,21 @@ class TipoUsuarioController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
+				'actions'=>array('index','view','create','update','admin','delete'),
+				//'users'=>array('*'),
+				'expression'=>'$user->id == 1 && $user->tipoUsuario == 1',
+			),/*
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
-				//'users'=>array('@'),
-				'expression'=>'$user->tipoUsuario == 1',
+				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				//'users'=>array('admin'),
-				'expression'=>'$user->tipoUsuario == 1',
+				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
-			),
+			),*/
 		);
 	}
 
@@ -73,7 +72,7 @@ class TipoUsuarioController extends Controller
 		{
 			$model->attributes=$_POST['TipoUsuario'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idTipoUsuario));
+				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('create',array(
@@ -97,7 +96,7 @@ class TipoUsuarioController extends Controller
 		{
 			$model->attributes=$_POST['TipoUsuario'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idTipoUsuario));
+				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('update',array(

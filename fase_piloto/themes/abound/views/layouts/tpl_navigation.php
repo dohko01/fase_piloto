@@ -12,26 +12,34 @@
           
           <div class="nav-collapse">
 		  <?php 
+		  
+		$items = array();
+		$items[] = array('label'=>'Home', 'url'=>array('/site/index'));
+		if(Yii::app()->user->id != 0 && Yii::app()->user->tipoUsuario == 1)
+		{
+			array_push($items,
+					array('label'=>'Catalogos <span class="caret"></span>', 'url'=>'#','itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown"), 
+							'items'=>array(
+								array('label'=>'Tipos de Usuario', 'url'=>array('/tipoUsuario')),
+								array('label'=>'Usuarios', 'url'=>array('/usuario')),
+								array('label'=>'My Invoices <span class="badge badge-info pull-right">12</span>', 'url'=>'#'),
+								array('label'=>'Separated link', 'url'=>'#'),
+								array('label'=>'One more separated link', 'url'=>'#'),
+							)));
+		}
+		  
+		array_push($items,
+			array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+			array('label'=>'Contact', 'url'=>array('/site/contact')),
+			array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+			array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest));
+		  
 		  $this->widget('zii.widgets.CMenu',array(
 		  	'htmlOptions'=>array('class'=>'pull-right nav'),
 			'submenuHtmlOptions'=>array('class'=>'dropdown-menu'),
 			'itemCssClass'=>'item-test',
 			'encodeLabel'=>false,
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'Catalogos <span class="caret"></span>', 'url'=>'#','itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown"), 
-                        'items'=>array(
-                            array('label'=>'Tipos de Usuario', 'url'=>array('/tipoUsuario')),
-							array('label'=>'Usuarios', 'url'=>array('/usuario')),
-							array('label'=>'My Invoices <span class="badge badge-info pull-right">12</span>', 'url'=>'#'),
-							array('label'=>'Separated link', 'url'=>'#'),
-							array('label'=>'One more separated link', 'url'=>'#'),
-                        )),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
+			'items'=>$items,
 			)); ?>
     	</div>
     </div>

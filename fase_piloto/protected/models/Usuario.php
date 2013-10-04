@@ -4,19 +4,17 @@
  * This is the model class for table "tbl_usuario".
  *
  * The followings are the available columns in table 'tbl_usuario':
- * @property integer $idUsuario
+ * @property integer $id
+ * @property integer $id_cat_tipo_usuario
  * @property string $nombre
- * @property string $apellido_paterno
- * @property string $apellido_materno
- * @property string $username
- * @property string $pw
- * @property integer $activo
- * @property string $permisos
- * @property integer $idTipoUsuario
  * @property string $email
+ * @property string $telefono
+ * @property string $user
+ * @property string $pass
+ * @property boolean $activo
  *
  * The followings are the available model relations:
- * @property TblcTipoUsuario $idTipoUsuario0
+ * @property TblcTipoUsuario $idCatTipoUsuario
  */
 class Usuario extends CActiveRecord
 {
@@ -36,12 +34,16 @@ class Usuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('activo, idTipoUsuario', 'numerical', 'integerOnly'=>true),
-			array('nombre, apellido_paterno, apellido_materno, username, email', 'length', 'max'=>255),
-			array('pw, permisos', 'safe'),
+			array('id_cat_tipo_usuario, nombre, user, pass', 'required'),
+			array('id_cat_tipo_usuario', 'numerical', 'integerOnly'=>true),
+			array('nombre', 'length', 'max'=>100),
+			array('email, telefono', 'length', 'max'=>30),
+			array('user', 'length', 'max'=>15),
+			array('pass', 'length', 'max'=>45),
+			array('activo', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('idUsuario, nombre, apellido_paterno, apellido_materno, username, pw, activo, permisos, idTipoUsuario, email', 'safe', 'on'=>'search'),
+			array('id, id_cat_tipo_usuario, nombre, email, telefono, user, pass, activo', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,7 +55,7 @@ class Usuario extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idTipoUsuario0' => array(self::BELONGS_TO, 'TblcTipoUsuario', 'idTipoUsuario'),
+			'idCatTipoUsuario' => array(self::BELONGS_TO, 'TblcTipoUsuario', 'id_cat_tipo_usuario'),
 		);
 	}
 
@@ -63,16 +65,14 @@ class Usuario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idUsuario' => 'Id Usuario',
+			'id' => 'ID',
+			'id_cat_tipo_usuario' => 'Id Cat Tipo Usuario',
 			'nombre' => 'Nombre',
-			'apellido_paterno' => 'Apellido Paterno',
-			'apellido_materno' => 'Apellido Materno',
-			'username' => 'Username',
-			'pw' => 'Pw',
-			'activo' => 'Activo',
-			'permisos' => 'Permisos',
-			'idTipoUsuario' => 'Id Tipo Usuario',
 			'email' => 'Email',
+			'telefono' => 'Telefono',
+			'user' => 'User',
+			'pass' => 'Pass',
+			'activo' => 'Activo',
 		);
 	}
 
@@ -94,16 +94,14 @@ class Usuario extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('idUsuario',$this->idUsuario);
+		$criteria->compare('id',$this->id);
+		$criteria->compare('id_cat_tipo_usuario',$this->id_cat_tipo_usuario);
 		$criteria->compare('nombre',$this->nombre,true);
-		$criteria->compare('apellido_paterno',$this->apellido_paterno,true);
-		$criteria->compare('apellido_materno',$this->apellido_materno,true);
-		$criteria->compare('username',$this->username,true);
-		$criteria->compare('pw',$this->pw,true);
-		$criteria->compare('activo',$this->activo);
-		$criteria->compare('permisos',$this->permisos,true);
-		$criteria->compare('idTipoUsuario',$this->idTipoUsuario);
 		$criteria->compare('email',$this->email,true);
+		$criteria->compare('telefono',$this->telefono,true);
+		$criteria->compare('user',$this->user,true);
+		$criteria->compare('pass',$this->pass,true);
+		$criteria->compare('activo',$this->activo);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
