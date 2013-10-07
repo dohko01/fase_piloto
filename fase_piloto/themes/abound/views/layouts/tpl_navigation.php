@@ -8,7 +8,7 @@
           </a>
      
           <!-- Be sure to leave the brand out there if you want it shown -->
-          <a class="brand" href="#"><?php echo CHtml::encode($this->pageTitle); ?></a>
+          <a class="brand" href="#"><?php echo CHtml::encode(Yii::app()->name); ?></a>
           
           <div class="nav-collapse">
 		  <?php 
@@ -26,6 +26,12 @@
 								array('label'=>'Nivel', 'url'=>array('/nivel')),
 								array('label'=>'Clasificacion', 'url'=>array('/clasificacion')),
 								array('label'=>'Direccion', 'url'=>array('/direccion')),
+                                array('label'=>'Motor de base de datos', 'url'=>array('/motorbdatos')),
+                                array('label'=>'Significado de campo', 'url'=>array('/significadocampo')),
+                                array('label'=>'Tipo de campo', 'url'=>array('/tipocampo')),
+                                array('label'=>'Criterio de evaluación', 'url'=>array('/criterioevaluacion')),
+                                array('label'=>'Periodicidad', 'url'=>array('/periodicidad')),
+                                array('label'=>'Escala de evaluación', 'url'=>array('/escalaevaluacion')),
 							)));
 		}
 		  
