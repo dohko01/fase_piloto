@@ -20,12 +20,6 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id_cat_tipo_usuario'); ?>
-		<?php echo $form->textField($model,'id_cat_tipo_usuario'); ?>
-		<?php echo $form->error($model,'id_cat_tipo_usuario'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'nombre'); ?>
 		<?php echo $form->textField($model,'nombre',array('size'=>60,'maxlength'=>100)); ?>
 		<?php echo $form->error($model,'nombre'); ?>
@@ -54,7 +48,14 @@
 		<?php echo $form->passwordField($model,'pass',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'pass'); ?>
 	</div>
-
+	
+	<div class="row">
+		<?php $list = CHtml::listData(TipoUsuario::model()->findAll(), 'id', 'nombre'); ?>
+		<?php echo $form->labelEx($model,'id_cat_tipo_usuario'); ?>
+		<?php echo $form->dropDownList($model,'id_cat_tipo_usuario', $list); ?>
+		<?php echo $form->error($model,'id_cat_tipo_usuario'); ?>
+	</div>
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'activo'); ?>
 		<?php echo $form->checkBox($model,'activo'); ?>

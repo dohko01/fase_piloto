@@ -29,7 +29,16 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		//$this->render('index');
+		if(Yii::app()->user->id == 0)
+			$this->actionLogin();
+		else
+		{
+			if(Yii::app()->user->tipoUsuario == 1)
+				$this->redirect(array("administrador/"));
+			if(Yii::app()->user->tipoUsuario == 2)
+				$this->redirect(array("analista/"));
+		}
 	}
 
 	/**

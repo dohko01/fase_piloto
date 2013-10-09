@@ -18,7 +18,7 @@ class UserIdentity extends CUserIdentity
 			$this->_id='user Null';
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
 		}
-		else if($record->pass!==$this->password)            // here I compare db password with passwod field
+		else if($record->pass!==md5($this->password))            // here I compare db password with passwod field
 		{
 			//$this->_id=$this->username;
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;

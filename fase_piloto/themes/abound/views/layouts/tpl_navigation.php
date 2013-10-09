@@ -12,7 +12,6 @@
           
           <div class="nav-collapse">
 		  <?php 
-	
 		$items = array();
 		$items[] = array('label'=>'Home', 'url'=>array('/site/index'));
 		if(Yii::app()->user->id != 0 && Yii::app()->user->tipoUsuario == 1)
@@ -34,7 +33,17 @@
                                 array('label'=>'Escala de evaluación', 'url'=>array('/escalaevaluacion')),
 							)));
 		}
-		  
+		//
+		if(Yii::app()->user->id != 0 && Yii::app()->user->tipoUsuario == 2)
+		{
+			array_push($items,
+					array('label'=>'Menu Analista <span class="caret"></span>', 'url'=>'#','itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown"), 
+							'items'=>array(
+								array('label'=>'List 1', 'url'=>'#'),
+								array('label'=>'List 2', 'url'=>'#'),
+								array('label'=>'List 3', 'url'=>'#'),
+							)));
+		} 
 		array_push($items,
 			array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 			array('label'=>'Contact', 'url'=>array('/site/contact')),

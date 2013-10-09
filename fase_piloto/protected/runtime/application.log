@@ -1856,3 +1856,288 @@ Stack trace:
 REQUEST_URI=/fase_piloto/fase_piloto/index.php/site/login
 HTTP_REFERER=http://localhost:8080/fase_piloto/fase_piloto/index.php/site/login
 ---
+2013/10/09 16:18:44 [error] [php] Missing argument 3 for CActiveForm::dropDownList(), called in C:\wamp\www\fase_piloto\fase_piloto\protected\views\usuario\_form.php on line 55 and defined (C:\wamp\www\fase_piloto\framework\web\widgets\CActiveForm.php:845)
+Stack trace:
+#0 C:\wamp\www\fase_piloto\framework\web\CBaseController.php(95): UsuarioController->renderInternal()
+#1 C:\wamp\www\fase_piloto\framework\web\CController.php(869): UsuarioController->renderFile()
+#2 C:\wamp\www\fase_piloto\fase_piloto\protected\views\usuario\create.php(18): UsuarioController->renderPartial()
+#3 C:\wamp\www\fase_piloto\framework\web\CBaseController.php(126): require()
+#4 C:\wamp\www\fase_piloto\framework\web\CBaseController.php(95): UsuarioController->renderInternal()
+#5 C:\wamp\www\fase_piloto\framework\web\CController.php(869): UsuarioController->renderFile()
+#6 C:\wamp\www\fase_piloto\framework\web\CController.php(782): UsuarioController->renderPartial()
+#7 C:\wamp\www\fase_piloto\fase_piloto\protected\controllers\UsuarioController.php(82): UsuarioController->render()
+#8 C:\wamp\www\fase_piloto\framework\web\actions\CInlineAction.php(49): UsuarioController->actionCreate()
+#9 C:\wamp\www\fase_piloto\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\wamp\www\fase_piloto\framework\web\filters\CFilterChain.php(133): UsuarioController->runAction()
+#11 C:\wamp\www\fase_piloto\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp\www\fase_piloto\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#13 C:\wamp\www\fase_piloto\framework\web\filters\CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#14 C:\wamp\www\fase_piloto\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 C:\wamp\www\fase_piloto\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp\www\fase_piloto\framework\web\CController.php(265): UsuarioController->runActionWithFilters()
+#17 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(282): UsuarioController->run()
+#18 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\wamp\www\fase_piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\wamp\www\fase_piloto\fase_piloto\index.php(13): CWebApplication->run()
+REQUEST_URI=/fase_piloto/fase_piloto/index.php/usuario/create
+in C:\wamp\www\fase_piloto\fase_piloto\protected\views\usuario\_form.php (55)
+in C:\wamp\www\fase_piloto\fase_piloto\protected\views\usuario\create.php (18)
+in C:\wamp\www\fase_piloto\fase_piloto\protected\controllers\UsuarioController.php (82)
+2013/10/09 16:58:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\fase_piloto\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\fase_piloto\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\fase_piloto\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\fase_piloto\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\fase_piloto\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\fase_piloto\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\fase_piloto\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\fase_piloto\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#9 C:\wamp\www\fase_piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\fase_piloto\fase_piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/fase_piloto/fase_piloto/index.php/usuario/create
+---
+2013/10/09 17:09:05 [error] [php] Undefined variable: model (C:\wamp\www\fase_piloto\fase_piloto\themes\abound\views\site\login.php:40)
+Stack trace:
+#0 C:\wamp\www\fase_piloto\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\fase_piloto\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\fase_piloto\fase_piloto\protected\controllers\SiteController.php(32): SiteController->render()
+#3 C:\wamp\www\fase_piloto\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\wamp\www\fase_piloto\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\fase_piloto\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\fase_piloto\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\fase_piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\fase_piloto\fase_piloto\index.php(13): CWebApplication->run()
+REQUEST_URI=/fase_piloto/fase_piloto/index.php/site/index
+in C:\wamp\www\fase_piloto\fase_piloto\themes\abound\views\site\login.php (40)
+in C:\wamp\www\fase_piloto\fase_piloto\protected\controllers\SiteController.php (32)
+in C:\wamp\www\fase_piloto\fase_piloto\index.php (13)
+2013/10/09 17:09:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\fase_piloto\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\fase_piloto\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\fase_piloto\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\fase_piloto\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\fase_piloto\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\fase_piloto\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\fase_piloto\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\fase_piloto\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#9 C:\wamp\www\fase_piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\fase_piloto\fase_piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/fase_piloto/fase_piloto/index.php/usuario/create
+---
+2013/10/09 17:09:12 [error] [php] Undefined variable: model (C:\wamp\www\fase_piloto\fase_piloto\themes\abound\views\site\login.php:40)
+Stack trace:
+#0 C:\wamp\www\fase_piloto\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\fase_piloto\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\fase_piloto\fase_piloto\protected\controllers\SiteController.php(32): SiteController->render()
+#3 C:\wamp\www\fase_piloto\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\wamp\www\fase_piloto\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\fase_piloto\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\fase_piloto\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\fase_piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\fase_piloto\fase_piloto\index.php(13): CWebApplication->run()
+REQUEST_URI=/fase_piloto/fase_piloto/index.php
+in C:\wamp\www\fase_piloto\fase_piloto\themes\abound\views\site\login.php (40)
+in C:\wamp\www\fase_piloto\fase_piloto\protected\controllers\SiteController.php (32)
+in C:\wamp\www\fase_piloto\fase_piloto\index.php (13)
+2013/10/09 17:09:22 [error] [php] Undefined variable: model (C:\wamp\www\fase_piloto\fase_piloto\themes\abound\views\site\login.php:40)
+Stack trace:
+#0 C:\wamp\www\fase_piloto\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\fase_piloto\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\fase_piloto\fase_piloto\protected\controllers\SiteController.php(32): SiteController->render()
+#3 C:\wamp\www\fase_piloto\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\wamp\www\fase_piloto\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\fase_piloto\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\fase_piloto\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\fase_piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\fase_piloto\fase_piloto\index.php(13): CWebApplication->run()
+REQUEST_URI=/fase_piloto/fase_piloto/
+in C:\wamp\www\fase_piloto\fase_piloto\themes\abound\views\site\login.php (40)
+in C:\wamp\www\fase_piloto\fase_piloto\protected\controllers\SiteController.php (32)
+in C:\wamp\www\fase_piloto\fase_piloto\index.php (13)
+2013/10/09 17:11:16 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\fase_piloto\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\fase_piloto\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\fase_piloto\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\fase_piloto\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\fase_piloto\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\fase_piloto\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\fase_piloto\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\fase_piloto\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(141): CWebApplication->runController('usuario/create')
+#9 C:\wamp\www\fase_piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\fase_piloto\fase_piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/fase_piloto/fase_piloto/index.php/usuario/create
+HTTP_REFERER=http://localhost:8080/fase_piloto/fase_piloto/index.php/site/index
+---
+2013/10/09 17:15:01 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.tipoUsuario" is not defined.' in C:\wamp\www\fase_piloto\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\fase_piloto\framework\web\auth\CWebUser.php(146): CComponent->__get('tipoUsuario')
+#1 C:\wamp\www\fase_piloto\fase_piloto\protected\controllers\SiteController.php(33): CWebUser->__get('tipoUsuario')
+#2 C:\wamp\www\fase_piloto\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#3 C:\wamp\www\fase_piloto\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\fase_piloto\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\fase_piloto\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(282): CController->run('index')
+#7 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#8 C:\wamp\www\fase_piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\fase_piloto\fase_piloto\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/fase_piloto/fase_piloto/index.php/site/index
+HTTP_REFERER=http://localhost:8080/fase_piloto/fase_piloto/index.php/site/login
+---
+2013/10/09 17:15:06 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.tipoUsuario" is not defined.' in C:\wamp\www\fase_piloto\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\fase_piloto\framework\web\auth\CWebUser.php(146): CComponent->__get('tipoUsuario')
+#1 C:\wamp\www\fase_piloto\fase_piloto\protected\controllers\SiteController.php(33): CWebUser->__get('tipoUsuario')
+#2 C:\wamp\www\fase_piloto\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#3 C:\wamp\www\fase_piloto\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\fase_piloto\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\fase_piloto\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#8 C:\wamp\www\fase_piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\fase_piloto\fase_piloto\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/fase_piloto/fase_piloto/index.php
+---
+2013/10/09 17:15:07 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.tipoUsuario" is not defined.' in C:\wamp\www\fase_piloto\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\fase_piloto\framework\web\auth\CWebUser.php(146): CComponent->__get('tipoUsuario')
+#1 C:\wamp\www\fase_piloto\fase_piloto\protected\controllers\SiteController.php(33): CWebUser->__get('tipoUsuario')
+#2 C:\wamp\www\fase_piloto\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#3 C:\wamp\www\fase_piloto\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\fase_piloto\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\fase_piloto\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#8 C:\wamp\www\fase_piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\fase_piloto\fase_piloto\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/fase_piloto/fase_piloto/index.php
+---
+2013/10/09 17:15:07 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.tipoUsuario" is not defined.' in C:\wamp\www\fase_piloto\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\fase_piloto\framework\web\auth\CWebUser.php(146): CComponent->__get('tipoUsuario')
+#1 C:\wamp\www\fase_piloto\fase_piloto\protected\controllers\SiteController.php(33): CWebUser->__get('tipoUsuario')
+#2 C:\wamp\www\fase_piloto\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#3 C:\wamp\www\fase_piloto\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\fase_piloto\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\fase_piloto\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(282): CController->run('index')
+#7 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#8 C:\wamp\www\fase_piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\fase_piloto\fase_piloto\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/fase_piloto/fase_piloto/index.php/site/index
+HTTP_REFERER=http://localhost:8080/fase_piloto/fase_piloto/index.php/site/login
+---
+2013/10/09 18:00:01 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "analista".' in C:\wamp\www\fase_piloto\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\fase_piloto\framework\web\CController.php(782): CController->renderPartial('analista', NULL, true)
+#1 C:\wamp\www\fase_piloto\fase_piloto\protected\controllers\SiteController.php(36): CController->render('analista')
+#2 C:\wamp\www\fase_piloto\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#3 C:\wamp\www\fase_piloto\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\fase_piloto\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\fase_piloto\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#8 C:\wamp\www\fase_piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\fase_piloto\fase_piloto\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/fase_piloto/fase_piloto/index.php
+---
+2013/10/09 18:00:41 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "analista".' in C:\wamp\www\fase_piloto\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\fase_piloto\framework\web\CController.php(782): CController->renderPartial('analista', NULL, true)
+#1 C:\wamp\www\fase_piloto\fase_piloto\protected\controllers\SiteController.php(36): CController->render('analista')
+#2 C:\wamp\www\fase_piloto\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#3 C:\wamp\www\fase_piloto\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\fase_piloto\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\fase_piloto\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#8 C:\wamp\www\fase_piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\fase_piloto\fase_piloto\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/fase_piloto/fase_piloto/index.php
+---
+2013/10/09 18:04:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "analista".' in C:\wamp\www\fase_piloto\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\fase_piloto\framework\web\CController.php(270): CController->missingAction('analista')
+#1 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(282): CController->run('analista')
+#2 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(141): CWebApplication->runController('site/analista')
+#3 C:\wamp\www\fase_piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\fase_piloto\fase_piloto\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/fase_piloto/fase_piloto/index.php/site/analista
+HTTP_REFERER=http://localhost:8080/fase_piloto/fase_piloto/index.php
+---
+2013/10/09 18:05:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "analista".' in C:\wamp\www\fase_piloto\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\fase_piloto\framework\web\CController.php(270): CController->missingAction('analista')
+#1 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(282): CController->run('analista')
+#2 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(141): CWebApplication->runController('site/analista')
+#3 C:\wamp\www\fase_piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\fase_piloto\fase_piloto\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/fase_piloto/fase_piloto/index.php/site/analista
+HTTP_REFERER=http://localhost:8080/fase_piloto/fase_piloto/index.php
+---
+2013/10/09 18:23:00 [error] [exception.CException] exception 'CException' with message 'Filter "inlineFilterName" is invalid. Controller "AdministradorController" does not have the filter method "filterinlineFilterName".' in C:\wamp\www\fase_piloto\framework\web\filters\CInlineFilter.php:46
+Stack trace:
+#0 C:\wamp\www\fase_piloto\framework\web\filters\CFilterChain.php(72): CInlineFilter::create(Object(AdministradorController), 'inlineFilterNam...')
+#1 C:\wamp\www\fase_piloto\framework\web\CController.php(291): CFilterChain::create(Object(AdministradorController), Object(CInlineAction), Array)
+#2 C:\wamp\www\fase_piloto\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(282): CController->run('')
+#4 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador')
+#5 C:\wamp\www\fase_piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\wamp\www\fase_piloto\fase_piloto\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/fase_piloto/fase_piloto/index.php/administrador
+---
+2013/10/09 18:23:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\fase_piloto\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\fase_piloto\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\fase_piloto\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\fase_piloto\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\fase_piloto\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\fase_piloto\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\fase_piloto\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\fase_piloto\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(282): CController->run('')
+#8 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(141): CWebApplication->runController('administrador')
+#9 C:\wamp\www\fase_piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\fase_piloto\fase_piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/fase_piloto/fase_piloto/index.php/administrador
+---
+2013/10/09 18:24:37 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\fase_piloto\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\fase_piloto\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\fase_piloto\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\fase_piloto\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\fase_piloto\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\fase_piloto\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\fase_piloto\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\fase_piloto\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(282): CController->run('')
+#8 C:\wamp\www\fase_piloto\framework\web\CWebApplication.php(141): CWebApplication->runController('analista')
+#9 C:\wamp\www\fase_piloto\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\fase_piloto\fase_piloto\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/fase_piloto/fase_piloto/index.php/analista
+---
